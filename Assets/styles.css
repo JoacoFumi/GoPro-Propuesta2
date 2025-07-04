@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: Cabinet;
+    src: url(Tipos/CabinetGrotesk-Variable.woff2) format(woff2),
+    url(Tipos/CabinetGrotesk-Variable.woff) format(woff);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Montserrat, sans-serif;
+    background-color: #000614;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 100px 1000px 300px #006aff8e;
+    bottom: 80%;
+    left: 95%;
+    z-index: -999;
+}
+
+.b_2{
+    box-shadow: 0 100px 1000px 300px #006aff8e;
+    bottom: 10%;
+    left: 0;
+}
+
+.b_3{
+    box-shadow: 0 100px 1000px 300px #006aff2d;
+    bottom: 0;
+    left: 50%;
+}
+
+.b_4{
+    box-shadow: 0 100px 1000px 200px #006aff8f;
+    bottom: 60%;
+    left: 67%;
+}
+
+.b_5{
+    box-shadow: 0 100px 1000px 300px #006aff00;
+}
+
+
+/*NAV*/
+
+.nav__logo{
+    width: 100px;
+}
+
+.nav__menu{
+    position: fixed;
+    z-index: 999;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
+
+.nav__center{
+    background-color: #ffffff99;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+}
+
+.glass__container{
+    background-color: #b7b6ff11;
+    padding: 1rem 2rem;
+    border-radius: 99px;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 1px 1px 1px rgb(88, 127, 255, 0.4);
+}
+
+.nav__menu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/*Pildora
+
+.nav__link{
+    display: inline-block;
+    padding: .55rem 1.6rem;
+    border-radius: 900px;
+    color: #8b8b8b;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .3s, color .3s;
+}
+
+.nav__link:hover{
+    color: #000;
+}
+
+.nav__link.active{
+    background: #00283a;
+    color: #fff;
+}
+
+.nav__link.active:hover{
+    color: #fff;
+} */
+
+.nav__menu ul li a{
+    font-size: 14px;
+    color: #8b8b8b;
+    font-weight: 500;
+    transition: all .5s ease;
+}
+
+.nav__center .fa-solid{
+    font-size: 14px;
+}
+
+.nav__menu ul li a:hover{
+    color: #fff;
+}
+
+.nav__menu ul li:first-child{
+    border-radius: 900px;
+}
+
+
+.btn{
+    padding: 1rem 1.7rem;
+    border-radius: 99px;
+    background-color: #0048ff66;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: #0048ff 1px solid;
+    transition: all .5s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+}
+
+.btn:hover{
+    background-color: #0048ff;
+}
+
+.btn2{
+    padding: 1rem 1.7rem;
+    border-radius: 99px;
+    background-color: #0048ff66;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .5s ease;
+    
+    background-color: #b7b6ff11;
+    padding: 1rem 2rem;
+    border-radius: 99px;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 1px 1px 1px rgb(88, 127, 255, 0.4);
+}
+
+header .btn2{
+    margin-left: 1rem;
+}
+
+.btn2:hover{
+    background-color: #2e42b383;
+
+}
+
+
+/*HEADER*/
+
+.container{
+    position: relative;
+    scroll-margin-top: 75px;
+    padding: 2rem 5rem;
+    height: 100vh;
+}
+
+header{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.content{
+    position: relative;
+    margin-left: 10%;
+    top: 25px;
+}
+
+.content h1{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 2rem;
+    display: inline-block;
+    color: #fff;
+}
+
+.content h4{
+    color: #fff;
+    font-size: 80px;
+    font-family: Cabinet;
+    font-weight: 700;
+    line-height: 75px;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+.content p{
+    color: #ccc;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+.container .img{
+    max-width: 600px;
+    justify-self: center;
+    margin-right: 10%;
+}
+
+/*Lentes*/
+
+.container__lentes{
+    position: relative;
+    padding: 2rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+}
+
+.content__lentes{
+    margin-left: 10%;
+    position: relative;
+}
+
+.content__lentes h4{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.content__lentes h2{
+    color: #fff;
+    font-size: 60px;
+    font-family: Cabinet;
+    font-weight: 600;
+    line-height: 65px;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+.content__lentes p{
+    color: #ccc;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+
+/*Modulos*/
+
+.modulos__lentes{
+    height: 500px;
+    margin-right: 18%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.modulo__lente{
+    width: 340px;
+    height: 240px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+
+/*Carac*/
+
+.container__carac{
+    position: relative;
+    padding: 2rem 5rem;
+    align-items: center;
+    height: 100vh;
+}
+
+.content__carac{
+    margin: auto;
+    justify-items: center;
+    position: relative;
+}
+
+.content__carac h4{
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.content__carac h3{
+    color: #fff;
+    font-size: 60px;
+    font-family: Cabinet;
+    font-weight: 600;
+    line-height: 25px;
+    max-width: 550px;
+    margin-bottom: 2rem;
+}
+
+.modulos__carac{
+    display: flex;
+}
+
+.modulo__carac{
+    width: 340px;
+    height: 240px;
+    background-color: #fff;
+    border-radius: 12px;
+}
