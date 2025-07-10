@@ -323,9 +323,69 @@ header{
 }
 
 .cuadro_dentro{
+    position: relative;
+    overflow: hidden;    
+}
+
+.img_lentes_1{
+    width: 110%;
+    height: 110%;
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.img_lentes_2{
+    width: 128%;
+    height: 128%;
+    object-fit: contain;
+    position: absolute;
+    left: -40px;
+    top: 0px;
+}
+
+.img_lentes_3{
+    width: 115%;
+    height: 115%;
+    object-fit: contain;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.img_lentes_4{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 20;
+    top: 15px;
+}
+
+/*.cuadro_dentro_1{
+    width: 100%;
+    height: 100%;
+    background-image: url(Img/Lente1.png);
+    background-size: cover;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+}
+
+.cuadro_dentro_2{
     width: 100%;
     height: 100%;
 }
+
+.cuadro_dentro_3{
+    width: 100%;
+    height: 100%;
+}
+
+.cuadro_dentro_4{
+    width: 100%;
+    height: 100%;
+}*/
 
 .data_dentro{
     display: flex;
