@@ -632,12 +632,22 @@ header{
     height: 550px;
     border-radius: 25px;
     padding: 80px;
-    display: flex;
+    position: relative;
+}
+
+.img_acc{
+    position: absolute;
+    bottom: 0;
+    right: 110px;
+    max-width: 550px;
 }
 
 .container_data_acc{
-    margin-left: 2rem;
-    align-self: flex-end;
+    margin-left: 5%;
+    margin-top: 23px ;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .data_3 h4{
@@ -659,6 +669,9 @@ header{
     max-width: 400px;
 }
 
+.container_data_acc button{
+    align-self: flex-start;
+}
 
 /*FOOTER*/
 
