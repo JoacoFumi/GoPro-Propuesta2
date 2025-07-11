@@ -562,6 +562,61 @@ header{
     align-self: center;
 }
 
+.cuadro_galeria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 1.5rem;
+}
+
+.cuadro_galeria h6{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.cuadro_dentro_galeria{
+    aspect-ratio: 5 /6;
+    position: relative;
+    overflow: hidden;    
+}
+
+.img_galeria_1{
+    width: 101%;
+    height: 101%;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.img_galeria_2{
+    width: 101%;
+    height: 101%;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.img_galeria_3{
+    width: 101%;
+    height: 101%;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.img_galeria_4{
+    width: 101%;
+    height: 101%;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
 
 /*ACC*/
 
