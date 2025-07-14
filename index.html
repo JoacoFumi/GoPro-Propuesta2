@@ -17,10 +17,10 @@
             </div>
             <div class="nav__center glass__container">
                 <ul>
-                    <li><a href="#inicio" class="nav__link active">Inicio</a></li>
+                    <li><a href="#inicio" class="nav__link">Inicio</a></li>
                     <li><a href="#lentes" class="nav__link">Lentes</a></li>
                     <li><a href="#caracteristicas" class="nav__link">Características</a></li>
-                    <li><a href="#galeria" class="nav__link">Galeria</a></li>
+                    <li><a href="#galeria" class="nav__link">Galería</a></li>
                     <li><a href="#accesorios" class="nav__link">Accesorios <i class="fa-solid fa-angle-down"></i></a></li>
                 </ul>
             </div>
@@ -34,7 +34,7 @@
             <h4>Donde empieza tu aventura</h3>
             <p>Cámara de acción deportiva premium, compacta, resistente, diseñada para grabar vídeos y fotos en alta calidad durante la realización de deportes o actividades extremas y de aventura.</p>
             <button class="btn">Comprar</button>
-            <button class="btn2">Novedades</button>
+            <!--<button class="btn2">Novedades</button>-->
         </div>
         <img class="img" src="Assets/Img/HERO13.png" alt="GoPro Hero13 Black">
         <span class="blur"></span>
@@ -62,7 +62,7 @@
                     <div class="data_dentro">
                         <h3>Lente macro</h3>
                         <p>Llega 4 veces más cerca que solo con la HERO13 Black. Y disfruta también de distancia de enfoque variable.</p>
-                        <button class="btn2">Ver más <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="cuadro glass">
@@ -72,7 +72,7 @@
                     <div class="data_dentro">
                         <h3>Lente ultra gran angular</h3>
                         <p>Imágenes un 36% más anchas y un 48% más altas que solo con la HERO13 Black para conseguir el POV (punto de vista) definitivo.</p>
-                        <button class="btn2">Ver más <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="cuadro glass">
@@ -82,7 +82,7 @@
                     <div class="data_dentro bug_1">
                         <h3>Desenfoque por movimiento</h3>
                         <p>Ajusta la configuración de la cámara de forma automática para un desenfoque por movimientode calidad profesional.</p>
-                        <button class="btn2">Ver más <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
                 <div class="cuadro glass">
@@ -92,7 +92,7 @@
                     <div class="data_dentro">
                         <h3>Lente anamórfica</h3>
                         <p>Proporciona rápidamente una relación de aspecto cinematográfica 21:9 sin distorsión alguna y con destellos.</p>
-                        <button class="btn2">Ver más <i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
                 </div>
             </div>
@@ -168,7 +168,7 @@
                 <a href="#inicio">Inicio</a>
                 <a href="#lentes">Lentes</a>
                 <a href="#caracteristicas">Características</a>
-                <a href="#galeria">Galeria</a>
+                <a href="#galeria">Galería</a>
                 <a href="#accesorios">Accesorios</a>
             </div>
             <hr class="divisor_footer">
@@ -177,4 +177,36 @@
             </div>
         </div>
     </section>
+    <script>
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav__link");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href").slice(1) === entry.target.id) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+  }, {
+    threshold: 0.4
+  });
+
+  sections.forEach(section => observer.observe(section));
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < 100) {
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#inicio") {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+</script>
 </body>

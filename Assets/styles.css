@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
     font-family: Cabinet;
     src: url(Tipos/CabinetGrotesk-Variable.woff2) format(woff2),
@@ -19,7 +21,7 @@
 }
 
 body{
-    font-family: Montserrat, sans-serif;
+    font-family: Poppins, Montserrat, sans-serif;
     background-color: #000614;
 }
 
@@ -31,35 +33,35 @@ a{
     text-decoration: none;
 }
 
-.blur{
+/*.blur{
     position: absolute;
-    box-shadow: 0 100px 1000px 300px #006aff8e;
+    box-shadow: 0 100px 1000px 300px #0048ff8e;
     bottom: 80%;
     left: 95%;
     z-index: -999;
 }
 
 .b_2{
-    box-shadow: 0 100px 1000px 300px #006aff8e;
+    box-shadow: 0 100px 1000px 300px #0048ff8e;
     bottom: 10%;
     left: 0;
 }
 
 .b_3{
-    box-shadow: 0 100px 1000px 300px #006aff2d;
+    box-shadow: 0 100px 1000px 300px #0048ff2d;
     bottom: 0;
     left: 50%;
 }
 
 .b_4{
-    box-shadow: 0 100px 1000px 200px #006aff8f;
+    box-shadow: 0 100px 1000px 200px #0048ff8f;
     bottom: 60%;
     left: 67%;
 }
 
 .b_5{
-    box-shadow: 0 100px 1000px 300px #006aff00;
-}
+    box-shadow: 0 100px 1000px 300px #0048ff00;
+}*/
 
 
 /*NAV*/
@@ -117,7 +119,7 @@ a{
     font-size: 14px;
     color: #8b8b8b;
     font-weight: 500;
-    transition: all .5s ease;
+    transition: color .5s ease;
 }
 
 .nav__center .fa-solid{
@@ -132,27 +134,39 @@ a{
     border-radius: 900px;
 }
 
-.nav__menu ul li a:focus{
-    color: #ff0000;
+.nav__link.active{
+    color: #fff;
+    border-bottom: #0048ff;
+    border-style: solid;
+    border-width: 2px;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /*background-color: #0048ff;
+    padding: 10px 16px;
+    border-radius: 50px;
+    border: 1px solid #3971ff;*/
 }
+
+
 
 .btn{
     padding: 1rem 1.7rem;
     border-radius: 99px;
-    background-color: #0048ff66;
+    background-color: #0048ff;
     color: #fff;
-    font-family: Montserrat;
+    font-family: Poppins;
     font-weight: 500;
     font-size: 14px;
     cursor: pointer;
     border: #0048ff 1px solid;
     transition: all .5s ease;
     backdrop-filter: blur(5px);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.089);
+    box-shadow: 0px 0px 150px #0048ff;
 }
 
 .btn:hover{
-    background-color: #0048ff;
+    background-color: #0048ff66;
 }
 
 .btn2{
@@ -160,7 +174,7 @@ a{
     border-radius: 99px;
     background-color: #0048ff66;
     color: #fff;
-    font-family: Montserrat;
+    font-family: Poppins;
     font-weight: 300;
     font-size: 14px;
     cursor: pointer;
@@ -172,7 +186,7 @@ a{
     backdrop-filter: blur(5px);
     border-top: 1px solid rgba(255, 255, 255, 0.4);
     border-left: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 1px 1px 1px rgb(88, 127, 255, 0.4);
+    box-shadow: 0px 0px 150px #000000;
 }
 
 header .btn2{
@@ -190,14 +204,16 @@ header .btn2{
 .container{
     position: relative;
     scroll-margin-top: 75px;
-    padding: 2rem 10%;
+    padding: 2rem 12%;
     height: 100vh;
+    margin-top: 25px;
 }
 
 header{
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
     align-items: center;
     gap: 2rem;
     height: 100vh;
@@ -229,7 +245,7 @@ header{
 
 .content p{
     color: #ccc;
-    font-family: Montserrat;
+    font-family: Poppins;
     font-weight: 300;
     font-size: 14px;
     max-width: 550px;
@@ -238,27 +254,36 @@ header{
 
 .container .img{
     max-width: 550px;
+    min-width: 400px;
     justify-self: center;
 }
 
+@media (max-width: 1500px) {
+    .content h4{
+        font-size: 60px;
+        line-height: 55px;
+    }
 
+    .container .img{
+        max-width: 450px;
+    }
+}
 
 /*LENTES*/
 
 .container__lentes{
     position: relative;
-    height: 120vh;
-    padding: 2rem 10%;
-    margin-top: 150px;
-    align-content: end;
+    height: auto;
+    padding: 2rem 12%;
+    margin: 150px auto 0;
 }
 
 .Data_1{
     display: grid;
-    grid-template-columns: repeat(4, minmax(3rem, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 140px;
     gap: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .Volanta_Titulo{
@@ -287,11 +312,11 @@ header{
 
 .Bajada_Btn p{
     color: #ccc;
-    font-family: Montserrat;
+    font-family: Poppins;
     font-weight: 300;
     font-size: 14px;
     margin-bottom: 1rem;
-    max-width: 280px;
+    max-width: 380px;
 }
 
 
@@ -304,7 +329,7 @@ header{
 
 .tarjetas{
     width: 100%;
-    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -316,33 +341,36 @@ header{
 }
 
 .cuadro{
+    aspect-ratio: 16 / 9;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: auto 1fr;
+    gap: 25px;
     padding: 1.5rem;
+    min-width: 0;
 }
 
 .cuadro_dentro{
+    aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;    
 }
 
 .img_lentes_1{
-    width: 110%;
-    height: 110%;
+    width: 105%;
+    height: 105%;
     object-fit: contain;
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 20px;
 }
 
 .img_lentes_2{
-    width: 128%;
-    height: 128%;
+    width: 125%;
+    height: 125%;
     object-fit: contain;
     position: absolute;
-    left: -40px;
-    top: 0px;
+    left: -30px;
+    top: 5px;
 }
 
 .img_lentes_3{
@@ -355,12 +383,12 @@ header{
 }
 
 .img_lentes_4{
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     object-fit: contain;
     position: absolute;
     left: 20;
-    top: 15px;
+    top: 20px;
 }
 
 /*.cuadro_dentro_1{
@@ -390,11 +418,12 @@ header{
 .data_dentro{
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     justify-content: flex-end;
 }
 
 .data_dentro h3{
+    font-family: Cabinet;
     color: #fff;
     font-size: 30px;
     font-weight: 600;
@@ -405,24 +434,50 @@ header{
 .data_dentro p{
     color: #ccc;
     font-size: 14px;
+    line-height: 17px;
 }
 
-.data_dentro button{
-    font-size: 20px;
 
-    background-color: #0000006b;
-    padding: 2rem 2rem;
-    border-radius: 25px;
-    backdrop-filter: blur(5px);
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 1px 1px 1px rgba(134, 134, 134, 0.4);
-}
 
 .fa-arrow-right-long{
     margin-left: 5%;
 }
 
+@media (max-width: 1600px){
+    .data_dentro h3{
+        font-size: 25px;
+        line-height: 24px;
+    }
+
+    .data_dentro p{
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width: 1313px){
+    .tarjetas{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .data_dentro h3{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .data_dentro p{
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Bajada_Btn p{
+        font-size: 12px;
+        margin-bottom: 1rem;
+        max-width: 380px;
+    }
+
+}
 
 /*CARAC*/
 
@@ -496,8 +551,8 @@ header{
 .container__galeria{
     position: relative;
     height: 100vh;
-    padding: 2rem 10%;
-    align-content: end;
+    padding: 2rem 12%;
+    align-content: center;
     margin-top: 10%;
 }
 
@@ -524,7 +579,7 @@ header{
 
 .bajada_galeria p{
     color: #ccc;
-    font-family: Montserrat;
+    font-family: Poppins;
     font-weight: 300;
     font-size: 14px;
     margin-bottom: 1rem;
@@ -536,6 +591,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     gap: 25px;
 }
 
@@ -545,7 +601,21 @@ header{
     border-radius: 25px;
 }
 
+
 .cards_galeria div:first-child{
+    margin: 0;
+}
+
+.cards_galeria div:nth-child(2){
+    margin-bottom: 10%;
+}
+
+.cards_galeria div:nth-child(3){
+    margin-top: 10%;
+}
+
+
+/*.cards_galeria div:first-child{
     align-self: center;
 }
 
@@ -560,7 +630,7 @@ header{
 
 .cards_galeria div:nth-child(4){
     align-self: center;
-}
+}*/
 
 .cuadro_galeria{
     display: flex;
@@ -573,7 +643,7 @@ header{
 .cuadro_galeria h6{
     color: #fff;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .cuadro_dentro_galeria{
@@ -618,6 +688,7 @@ header{
     top: 0px;
 }
 
+
 /*ACC*/
 
 .container_acc{
@@ -638,7 +709,7 @@ header{
 .img_acc{
     position: absolute;
     bottom: 0;
-    right: 110px;
+    right: 90px;
     max-width: 550px;
 }
 
@@ -662,7 +733,7 @@ header{
 
 .data_3 p{
     color: #ccc;
-    font-family: Montserrat;
+    font-family: Poppins;
     font-weight: 300;
     font-size: 14px;
     margin-bottom: 35px;
