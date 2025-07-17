@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOPRO2</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="Assets/swiper-bundle.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="Assets/styles.css">
+
     <script src="https://kit.fontawesome.com/bde3c7adab.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -21,7 +27,7 @@
                     <li><a href="#lentes" class="nav__link">Lentes</a></li>
                     <li><a href="#caracteristicas" class="nav__link">Características</a></li>
                     <li><a href="#galeria" class="nav__link">Galería</a></li>
-                    <li><a href="#accesorios" class="nav__link">Accesorios <i class="fa-solid fa-angle-down"></i></a></li>
+                    <li><a href="#accesorios" class="nav__link">Accesorios<!--<i class="fa-solid fa-angle-down"></i>--></a></li>
                 </ul>
             </div>
             <button class="btn">Comprar</button>
@@ -36,7 +42,12 @@
             <button class="btn">Comprar</button>
             <!--<button class="btn2">Novedades</button>-->
         </div>
-        <img class="img" src="Assets/Img/HERO13.png" alt="GoPro Hero13 Black">
+        <div class="objetos-flotantes">
+            <img src="Assets/Img/Objeto-flotante-1.png">
+            <img src="Assets/Img/Objeto-flotante-2.png">
+            <img src="Assets/Img/Objeto-flotante-3.png">
+            <img class="img" src="Assets/Img/HERO13.3.png" alt="GoPro Hero13 Black">
+        </div>
         <span class="blur"></span>
         <span class="blur"></span>
         <span class="blur"></span>
@@ -51,8 +62,8 @@
                 <h2>Lentes Modulares</h2>
             </div>
             <div class="Bajada_Btn">
+                <div></div>
                 <p>Las lentes activan automaticamente el modo adecuado con la configuración perfecta para la toma que quieras capturar.</p>
-                <button class="btn2">Leer más</button>
             </div>
         </div>
         <div class="cards_lentes">
@@ -64,8 +75,8 @@
                     <div class="data_dentro">
                         <h3>Lente macro</h3>
                         <p>Llega 4 veces más cerca que solo con la HERO13 Black. Y disfruta también de distancia de enfoque variable.</p>
-                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
+                    <img class="img_bolas_1" src="Assets/Img/cuadro-lente1.png">
                 </div>
                 <div class="cuadro glass">
                     <div class="cuadro_dentro glass">
@@ -74,8 +85,8 @@
                     <div class="data_dentro">
                         <h3>Lente ultra gran angular</h3>
                         <p>Imágenes un 36% más anchas y un 48% más altas que solo con la HERO13 Black para conseguir el POV (punto de vista) definitivo.</p>
-                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
+                    <img class="img_bolas_2" src="Assets/Img/cuadro-lente2.png">
                 </div>
                 <div class="cuadro glass">
                     <div class="cuadro_dentro glass">
@@ -84,8 +95,8 @@
                     <div class="data_dentro bug_1">
                         <h3>Desenfoque por movimiento</h3>
                         <p>Ajusta la configuración de la cámara de forma automática para un desenfoque por movimientode calidad profesional.</p>
-                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
+                    <img class="img_bolas_3" src="Assets/Img/cuadro-lente3.png">
                 </div>
                 <div class="cuadro glass">
                     <div class="cuadro_dentro glass">
@@ -94,8 +105,8 @@
                     <div class="data_dentro">
                         <h3>Lente anamórfica</h3>
                         <p>Proporciona rápidamente una relación de aspecto cinematográfica 21:9 sin distorsión alguna y con destellos.</p>
-                        <button class="btn2">Ver video acá <i class="fa-solid fa-arrow-right-long"></i></button>
                     </div>
+                    <img class="img_bolas_4" src="Assets/Img/cuadro-lente4.png">
                 </div>
             </div>
         </div>
@@ -106,11 +117,19 @@
 
     <section id="caracteristicas" class="container__carac">
         <div class="container_bento">
-                <div class="glass"></div>
-                <div class="glass"></div>
-                <div class="glass"></div>
-                <div class="glass"></div>
-                <div class="glass"></div>
+                <div class="video-fondo-1 glass">
+                    <video autoplay muted loop playsinline>
+                        <source src="Assets/Img/resolucion.mp4">
+                    </video>
+                </div>
+                <div class="video-fondo glass"></div>
+                <div class="video-fondo glass"></div>
+                <div class="video-fondo glass"></div>
+                <div class="video-fondo-4 glass">
+                    <video autoplay muted loop playsinline>
+                        <source src="Assets/Img/estabilizacion.mp4">
+                    </video>
+                </div>
             </div>
         <span class="blur"></span>
     </section>
@@ -129,28 +148,24 @@
                 <div class="cuadro_dentro_galeria glass">
                     <img class="img_galeria_1" src="Assets/Img/galeria1.jpg">
                 </div>
-                <hr class="divisor_galeria">
                 <h6>Snowboard</h6>
             </div>
             <div class="cuadro_galeria glass">
                 <div class="cuadro_dentro_galeria glass">
                     <img class="img_galeria_2" src="Assets/Img/galeria2.jpg">
                 </div>
-                <hr class="divisor_galeria">
                 <h6>BMX</h6>
             </div>
             <div class="cuadro_galeria glass">
                 <div class="cuadro_dentro_galeria glass">
                     <img class="img_galeria_3" src="Assets/Img/galeria3.jpg">
                 </div>
-                <hr class="divisor_galeria">
                 <h6>Surf</h6>
             </div>
             <div class="cuadro_galeria glass">
                 <div class="cuadro_dentro_galeria glass">
                     <img class="img_galeria_4" src="Assets/Img/galeria4.jpg">
                 </div>
-                <hr class="divisor_galeria">
                 <h6>Y más</h6>
             </div>
         </div>
@@ -167,10 +182,163 @@
                 <h4>Adaptala a tu forma de vivirla</h4>
                 <p>Cada persona la usa distinto. Sumá los accesorios que necesitás para registrar tu historia a tu manera. Surf, bici, ciudad o naturaleza: todo empieza con el equipo ideal.</p>
                 <p>Monturas, baterías, soportes, estuches y más. Conectá tu GoPro a cualquier situación y llevá tus capturas al  siguiente nivel, con el respaldo de accesorios oficiales.</p>
-                <div>
-                    <button class="btn2">Accesorios</button>
+            </div>
+        </div>
+        <span class="blur"></span>
+    </section>
+
+    <section id="" class="container_carrusel">
+        <span class="blur"></span>
+        <span class="blur"></span>
+        <div class="titulo-btn-swipe">
+            <h6 class="titulo_acc2">Todo lo que necesitás para más control</h6>
+            <div class="btn-swipe">
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+            </div>
+        </div>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+
+                    <div class="card swiper-slide">
+
+                        <p class="volanta_acc">Cambia de soporte con facilidad</p>
+
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="Assets/Img/acc1.png" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h6 class="name">Soporte con cierre
+mágnetico</h6>
+                        </div>
+
+                        <div class="star-prize">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="prize">$32.99</p>
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+
+                        <p class="volanta_acc">Control por Bluethoot para cámara</p>
+
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="Assets/Img/acc2.png" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h6 class="name">Mando a distancia con
+obturador sumergible</h6>
+                        </div>
+
+                        <div class="star-prize">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="prize">$59.99</p>
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+
+                        <p class="volanta_acc">Monta tu GoPro donde sea</p>
+
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="Assets/Img/acc3.png" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h6 class="name">Soporte flexible (con
+bridas Gear Tie)</h6>
+                        </div>
+
+                        <div class="star-prize">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="prize">$44.99</p>
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+
+                        <p class="volanta_acc">2 soportes adhesivos sumergibles</p>
+
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="Assets/Img/acc4.png" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h6 class="name">Soportes de cámara para tablas de surf</h6>
+                        </div>
+
+                        <div class="star-prize">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                            <p class="prize">$22.99</p>
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+
+                        <p class="volanta_acc">Carcasa de buceo sumergible</p>
+
+                        <div class="image-content">
+                            <div class="card-image">
+                                <img src="Assets/Img/acc5.png" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h6 class="name">Carcasa protectora
+                            </h6>
+                        </div>
+
+                        <div class="star-prize">
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="prize">$22.99</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -189,6 +357,10 @@
             </div>
         </div>
     </section>
+
+
+
+
     <script>
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav__link");
@@ -222,3 +394,7 @@
   });
 </script>
 </body>
+
+<script src="Assets/js/swiper-bundle.min.js"></script>
+
+<script src="Assets/js/script.js"></script>
