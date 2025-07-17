@@ -21,6 +21,11 @@
                     <img src="Assets/Img/GoPro-Logo.png">
                 </a>
             </div>
+            <div class="nav__toggle" id="nav-Toggle" >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="nav__center glass__container">
                 <ul>
                     <li><a href="#inicio" class="nav__link">Inicio</a></li>
@@ -122,8 +127,16 @@
                         <source src="Assets/Img/resolucion.mp4">
                     </video>
                 </div>
-                <div class="video-fondo glass"></div>
-                <div class="video-fondo glass"></div>
+                <div class="video-fondo-2 glass">
+                    <video autoplay muted loop playsinline>
+                        <source src="Assets/Img/sumergible4.webm">
+                    </video>
+                </div>
+                <div class="video-fondo-3 glass">
+                    <video autoplay muted loop playsinline>
+                        <source src="Assets/Img/bateria2.webm">
+                    </video>
+                </div>
                 <div class="video-fondo glass"></div>
                 <div class="video-fondo-4 glass">
                     <video autoplay muted loop playsinline>
@@ -177,7 +190,7 @@
 
     <section id="accesorios" class="container_acc">
         <div class="data_3 glass">
-            <img class="img_acc" src="Assets/Img/goproacc.png">
+            <img class="img_acc" src="Assets/Img/goproacc2.png">
             <div class="container_data_acc">
                 <h4>Adaptala a tu forma de vivirla</h4>
                 <p>Cada persona la usa distinto. Sumá los accesorios que necesitás para registrar tu historia a tu manera. Surf, bici, ciudad o naturaleza: todo empieza con el equipo ideal.</p>
@@ -362,37 +375,47 @@ bridas Gear Tie)</h6>
 
 
     <script>
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav__link");
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav__link");
 
-  const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+        if (entry.isIntersecting) {
         navLinks.forEach(link => {
-          link.classList.remove("active");
-          if (link.getAttribute("href").slice(1) === entry.target.id) {
+            link.classList.remove("active");
+            if (link.getAttribute("href").slice(1) === entry.target.id) {
             link.classList.add("active");
-          }
+            }
         });
-      }
+        }
     });
-  }, {
+    }, {
     threshold: 0.4
-  });
+    });
 
-  sections.forEach(section => observer.observe(section));
+    sections.forEach(section => observer.observe(section));
 
-  window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {
     if (window.scrollY < 100) {
-      navLinks.forEach(link => {
+        navLinks.forEach(link => {
         link.classList.remove("active");
         if (link.getAttribute("href") === "#inicio") {
-          link.classList.add("active");
+            link.classList.add("active");
         }
-      });
+        });
     }
-  });
+    });
 </script>
+
+<script>
+    const toggleBtn = document.getElementById('nav-Toggle');
+    const navMenu = document.querySelector('.nav__menu');
+
+    toggleBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    });
+</script>
+
 </body>
 
 <script src="Assets/js/swiper-bundle.min.js"></script>
